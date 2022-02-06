@@ -9,7 +9,7 @@ const logReceipt = function(...menuItems) {
 
 const printReceiptItems = function(...menuItems){
   menuItems.forEach(menuItem => {
-    console.log(menuItem.descr + ' $' + menuItem.price);
+    console.log(`${menuItem.descr} - $${menuItem.price}`);
   })
 };
 
@@ -18,7 +18,7 @@ const printTotal = function(...menuItems){
   menuItems.forEach(menuItem => {
     totalAmount += menuItem.price;
   })
-  console.log('Total $' + totalAmount);
+  console.log(`Total - $${totalAmount}`);
 };
 
 

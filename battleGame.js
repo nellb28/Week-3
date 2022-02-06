@@ -3,7 +3,7 @@
 const attack = function(attackingPlayer, defendingPlayer, baseDamage, variableDamage){
   let totalDamage = baseDamage + getRandomDamage(variableDamage);
   defendingPlayer.health = defendingPlayer.health - totalDamage;
-  return attackingPlayer.name + ' hits ' + defendingPlayer.name + ' for ' + totalDamage + ' damage!';
+  return `${attackingPlayer.name} hits ${defendingPlayer.name} for ${totalDamage} damage!`;
 };
 
 function getRandomDamage(maxDamageAmount){
