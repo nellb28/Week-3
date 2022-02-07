@@ -19,7 +19,19 @@ const getPointsFromResult = function getPointsFromResult(result) {
 // Create getTotalPoints function which accepts a string of results
 // including wins, draws, and losses i.e. 'wwdlw'
 // Returns total number of points won
+const getTotalPoints = results =>{
+  //console.log(`DEBUG - before split = ${results}`);
+  let splitResults = results.split('');
+  let totalPoints = 0;
 
+  splitResults.forEach(splitResult => {
+    //console.log(`DEBUG - Result equals = ${splitResult}`);
+    totalPoints += getPointsFromResult(splitResult);
+  })
+
+  //console.log(`DEBUG - total points = ${totalPoints}`);
+  return totalPoints;
+}
 
 
 // Check getTotalPoints
