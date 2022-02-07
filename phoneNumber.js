@@ -32,6 +32,8 @@ const testPhoneNumber = phoneNumber => {
 // $      end of line
 
 // check testPhoneNumber
+console.log(testPhoneNumber('(206) 333-4444')); // should return true
+console.log(testPhoneNumber('206 333 4444')); // should return true
 console.log(testPhoneNumber('206-333-4444')); // should return true
 console.log(testPhoneNumber('(206) 33-4444')); // should return false, missing a digit
 
