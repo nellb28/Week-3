@@ -4,8 +4,21 @@
 // '206-333-4444'
 // '206 333 4444'
 // Returns true if valid, false if not valid
+const testPhoneNumber = phoneNumber => {
+    //const regex = new RegExp('^\(?(\d{3})\)?[-.\s]?(\d{3})[-.\s]?(\d{4})$');
+    const regex = new RegExp('^\\\(?\\d{3}\\)?[-\\s]\\d{3}[-\\s]\\d{4}$');
+    console.log('CHECKING ---'+ regex.test(phoneNumber));
+    return true;
+}
+//^\\\(\\d{3}\\)[-\\s]\\d{3}[-\\s]\\d{4}$
 
 
+
+
+
+//working regEx
+//^\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})$
+//^\(?(\d{3})\)?[-.\s]?(\d{3})[-.\s]?(\d{4})$
 
 // Explanation of RegExp
 // ^      start of line
@@ -19,7 +32,7 @@
 // $      end of line
 
 // check testPhoneNumber
-console.log(testPhoneNumber('(206) 333-4444')); // should return true
+console.log(testPhoneNumber('206-333-4444')); // should return true
 console.log(testPhoneNumber('(206) 33-4444')); // should return false, missing a digit
 
 
