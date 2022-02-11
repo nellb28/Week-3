@@ -33,16 +33,16 @@ const parsePhoneNumber = phoneNumber => {
         let usrAreaCode = '';
         let usrNumber = '';
 
-        if (checkPhoneNumberFormat(phoneNumber) == 1){
+        if (checkPhoneNumberFormat(phoneNumber) === 1){
             firstPhoneSplit = phoneNumber.split('(');
             secondPhoneSplit = phoneNumber.split(')');
             usrAreaCode = secondPhoneSplit[0].replace('(', '').trim();;
             usrNumber = secondPhoneSplit[1].replace('-', '').trim();
-        } else  if (checkPhoneNumberFormat(phoneNumber) == 2){
+        } else  if (checkPhoneNumberFormat(phoneNumber) === 2){
             firstPhoneSplit = phoneNumber.split('-');
             usrAreaCode = firstPhoneSplit[0];
             usrNumber =  firstPhoneSplit[1].replace('-', '') + firstPhoneSplit[2];
-        }  else  if (checkPhoneNumberFormat(phoneNumber) == 3){
+        }  else  if (checkPhoneNumberFormat(phoneNumber) === 3){
             firstPhoneSplit = phoneNumber.split(' ');
             usrAreaCode = firstPhoneSplit[0];
             usrNumber =  firstPhoneSplit[1] + firstPhoneSplit[2];
