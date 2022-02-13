@@ -2,7 +2,24 @@
 // with these properties: {descr, price}
 // i.e. {descr: 'Coke', price: 1.99}
 // function should log each item to the console and log a total price
+const logReceipt = function(...menuItems) {
+  printReceiptItems(...menuItems);
+  printTotal(...menuItems);
+};
 
+const printReceiptItems = function(...menuItems){
+  menuItems.forEach(menuItem => {
+    console.log(`${menuItem.descr} - $${menuItem.price}`);
+  })
+};
+
+const printTotal = function(...menuItems){
+  let totalAmount = 0;
+  menuItems.forEach(menuItem => {
+    totalAmount += menuItem.price;
+  })
+  console.log(`Total - $${totalAmount}`);
+};
 
 
 // Check
